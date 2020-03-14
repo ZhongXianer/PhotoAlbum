@@ -21,7 +21,8 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
             android:background="@android:color/holo_orange_dark"
-            android:src="@android:drawable/ic_input_add"/>
+            android:src="@android:drawable/ic_input_add"
+            android:onClick="@{viewModel::onClick}"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

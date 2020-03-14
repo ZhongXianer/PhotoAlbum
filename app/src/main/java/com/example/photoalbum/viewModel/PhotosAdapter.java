@@ -1,4 +1,4 @@
-package com.example.photoalbum.others;
+package com.example.photoalbum.viewModel;
 
 import android.content.Context;
 import android.view.LayoutInflater;

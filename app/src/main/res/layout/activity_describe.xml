@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="photoToAdd"
+            type="com.example.photoalbum.model.Photos" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="为你的照片添加描述吧！"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/photo_to_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/describe_to_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="写下此时的想法"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/back_to_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完成"
+            android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+</layout>
