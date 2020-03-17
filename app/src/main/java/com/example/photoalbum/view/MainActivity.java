@@ -1,10 +1,14 @@
 package com.example.photoalbum.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.widget.TabHost;
+import android.widget.Toast;
 
 import com.example.photoalbum.BR;
 import com.example.photoalbum.R;
@@ -24,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private PhotosAdapter<Photos> photoAdapter;
 
     public List<Photos> photoList = new ArrayList<>();
-    private FloatingActionButton addButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,4 +43,33 @@ public class MainActivity extends AppCompatActivity {
         //加载数据
         mainViewModel.loadPhotos();
     }
+
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+//                                           @NonNull int[] grantResults) {
+//        switch (requestCode){
+//            case 1:
+//                if (grantResults.length>0&&grantResults[0]== PackageManager.PERMISSION_GRANTED){
+//                    mainViewModel.onClick(mainActivityBinding.addButton);
+//                }else {
+//                    Toast.makeText(this,"You denied the permission",Toast.LENGTH_SHORT).show();
+//                }
+//                break;
+//            case 2:
+//                if (grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_GRANTED){
+//                    mainViewModel.onClick(mainActivityBinding.addButton);
+//                }else {
+//                    Toast.makeText(this,"You denied the permission",Toast.LENGTH_SHORT).show();
+//                }
+//                break;
+//            case 3:
+//                if (grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_GRANTED){
+//                    mainViewModel.onClick(mainActivityBinding.addButton);
+//                }else {
+//                    Toast.makeText(this,"You denied the permission",Toast.LENGTH_SHORT).show();
+//                }
+//                break;
+//                default:
+//        }
+//    }
 }

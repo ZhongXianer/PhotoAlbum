@@ -72,8 +72,14 @@ public class MainViewModel {
         if (ContextCompat.checkSelfPermission(mActivity, Manifest.permission.CAMERA)!=
                 PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(mActivity,new String[]{Manifest.permission.CAMERA},1);
-        }else {
-            Camera2RecordActivity.start(mActivity);
+        }
+        if (ContextCompat.checkSelfPermission(mActivity,Manifest.permission.RECORD_AUDIO)!=
+                PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(mActivity,new String[]{Manifest.permission.RECORD_AUDIO},2);
+        }
+        if (ContextCompat.checkSelfPermission(mActivity,Manifest.permission.WRITE_EXTERNAL_STORAGE)!=
+                PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(mActivity,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},3);
         }
     }
 
